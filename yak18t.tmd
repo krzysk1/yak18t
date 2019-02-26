@@ -1807,11 +1807,18 @@
                 <[tmvector3d][Axis][-0.997564 0.0 0.069756]>
                 <[tmvector3d][Pivot][2.258720 -0.308000 0.324960]>
             >
+			// clock
+            <[graphics_input][LocalTime][]
+                <[uint32][InputID][LocalTime.Output]>
+            >
+            <[graphics_sec_to_hms][Watch][]
+                <[string8][Input][LocalTime.Output]>
+            >			
             <[hingedbodygraphics][clock_secondes_5][]
                 <[string8][GeometryList][ secondes ]>
                 <[uint32][PositionID][Fuselage.R]>
                 <[uint32][OrientationID][Fuselage.Q]>
-                <[uint32][AngleID][Clock.Output]>
+                <[string8][InputAngle][Watch.Seconds60]>
                 <[float64][AngleMax][0.104720]>
                 <[tmvector3d][Axis][-0.997564 0.0 0.069756]>
                 <[tmvector3d][Pivot][2.268720 -0.288000 0.381960]>
@@ -1820,7 +1827,7 @@
                 <[string8][GeometryList][ minutes ]>
                 <[uint32][PositionID][Fuselage.R]>
                 <[uint32][OrientationID][Fuselage.Q]>
-                <[uint32][AngleID][Clock.Output]>
+                <[string8][InputAngle][LocalTime.Output]>
                 <[float64][AngleMax][0.001745]>
                 <[tmvector3d][Axis][-0.997564 0.0 0.069756]>
                 <[tmvector3d][Pivot][2.268720 -0.288000 0.381960]>
@@ -1829,7 +1836,7 @@
                 <[string8][GeometryList][ heures ]>
                 <[uint32][PositionID][Fuselage.R]>
                 <[uint32][OrientationID][Fuselage.Q]>
-                <[uint32][AngleID][Clock.Output]>
+                <[string8][InputAngle][LocalTime.Output]>
                 <[float64][AngleMax][0.000145]>
                 <[tmvector3d][Axis][-0.997564 0.0 0.069756]>
                 <[tmvector3d][Pivot][2.268720 -0.288000 0.381960]>
