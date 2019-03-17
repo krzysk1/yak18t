@@ -1,4 +1,11 @@
 <[file][][]
+	//-------------------------------------
+	// Plane: Yak-18T
+	// 3D Design: Emmanuel Baranger (3D/FDM)/ Samaliet (System/Instruments)
+	// Compilation: krzysk(at)wp.pl
+	// Date: Fri Dec 04 2015; 2019
+	//-------------------------------------
+
     <[modelmanager][][]
         <[pointer_list_tmuniverse][DynamicObjects][]
             <[telemetry][Telemetry][]
@@ -269,7 +276,7 @@
             <[output][GroundRollLoadRight][]
                 <[string8][Input][RightWheelHull.Load]>
             >
-			
+
             // Airfoils
 
             <[airfoil][AirfoilHorizontalStabilizer][]
@@ -561,7 +568,7 @@
             <[input_default][FlapsInput][]
                 <[string8][Input][Controls.Flaps]>
                 <[uint][Positions][4]>
-                <[float64][Value][0.0]>					
+                <[float64][Value][0.0]>
             >
             <[linear_interpolation][FlapsMapping][]
                 <[string8][Input][FlapsInput.Output]>
@@ -1059,13 +1066,13 @@
                 <[string8][Input][DriveShaft.GetRotationSpeed]>
             >
             <[product][NormalizedPropellerSpeed][]
-                <[string8][Inputs][ DriveShaft.RotationSpeed 0.00641 ]> // = 1/RatedRotationSpeed 
+                <[string8][Inputs][ DriveShaft.RotationSpeed 0.00641 ]> // = 1/RatedRotationSpeed
             >
             <[sender][SenderPower][]
                 <[string8][Input][NormalizedPropellerSpeed.Output]>
                 <[string8][Message][Aircraft.Power]>
             >
-			
+
             // Instruments & outputs
 
             <[pitot_tube][PitotTube][]
@@ -1080,7 +1087,7 @@
             >
             <[altimeter][Altimeter][]
                 <[string8][StaticPressure][PitotTube.StaticPressure]>
-                <[float64][AltimeterSetting][PressureSettingInput.Output]>					
+                <[float64][AltimeterSetting][PressureSettingInput.Output]>
             >
             <[sender][SenderAltitude][]
                 <[string8][Input][Altimeter.PressureAltitude]>
@@ -1170,7 +1177,7 @@
             <[output][VerticalSpeedIndicatorNeedle][]
                 <[string8][Input][VerticalSpeedIndicator.VerticalSpeed]>
             >
-			
+
             // external lights start
 
             // strobe lights
@@ -1194,7 +1201,7 @@
             <[output][NavigationLightOn][]
                 <[string8][Input][NavigationLightSwitch.Output]>
             >
-			
+
             // beacon light
             <[input_switch][BeaconLightSwitch][]
                 <[string8][Input][Controls.Lighting.Beacon]>
@@ -1205,7 +1212,7 @@
             <[output][BeaconLightOn][]
                 <[string8][Input][BeaconLightSwitch.Output]>
             >
-			
+
             // landing lights
             <[input_switch][LandingLightSwitch][]
                 <[string8][Input][Controls.Lighting.Landing]>
@@ -1216,16 +1223,16 @@
             <[output][LandingLightOn][]
                 <[string8][Input][LandingLightSwitch.Output]>
             >
-			
+
             // external lighting end
 
 
             // animations start
 
             // canopy
-			
+
             // switches
-			
+
             // animations end
 
             // sound events
@@ -1235,15 +1242,15 @@
             >
             <[event_sound][KnobTurnSound][]
             >
-						
+
         >
         <[pointer_list_tmgraphics][GraphicObjects][]
 
             <[rigidbodygraphics][Fuselage][]
-                <[string8][GeometryList][ ailes ailes2 antenne axes barre cache capot echappes fuselage marche pito tailbeacon tailsupport trous 
-				 ceniceros interieur inttour 
-				 base lever lever1 seat poignee tubes 
-				 rear_base dos ]>
+                <[string8][GeometryList][ ailes ailes2 antenne axes barre cache capot echappes fuselage marche pito tailbeacon tailsupport trous
+                 ceniceros interieur inttour
+                 base lever lever1 seat poignee tubes
+                 rear_base dos ]>
                 <[uint32][PositionID][Fuselage.R]>
                 <[uint32][OrientationID][Fuselage.Q]>
             >
@@ -1253,20 +1260,20 @@
                 <[uint32][OrientationID][Fuselage.Q]>
                 <[uint32][ShowInside][0]>
             >
-			
-			// beacon light
+
+            // beacon light
             <[graphics_input][UniversalTime][]
                 <[uint32][InputID][UniversalTime.Output]>
-            >				
+            >
             <[graphics_flasher][BeaconFlasher][]
                 <[string8][Function][Triangle]>
                 <[string8][InputTime][UniversalTime.Output]>
                 <[float64][Period][2.493]>
                 <[float64][Minimum][0.1]>
-            >			
+            >
             <[graphics_input][BeaconLightOn][]
                 <[uint32][InputID][BeaconLightOn.Output]>
-            >			
+            >
             <[graphics_product][BeaconSwitched][]
                 <[uint32][Input0][BeaconFlasher.Output]>
                 <[uint32][Input1][BeaconLightOn.Output]>
@@ -1283,7 +1290,7 @@
                 <[float64][Size][0.03]>
                 <[float64][Brightness][3.0]>
             >
-			
+
             // navigation lights
             <[graphics_input][NavigationLightOn][]
                 <[uint32][InputID][NavigationLightOn.Output]>
@@ -1295,7 +1302,7 @@
                 <[tmvector3d][X0][ 0.7 0.7 0.0 ]>
                 <[tmvector3d][Color][ 1.0 0.3 0.1 1.0 ]>
                 <[float64][Brightness][ 1.0 ]>
-                <[string8][InputModulation][NavigationLightOn.Output]>				
+                <[string8][InputModulation][NavigationLightOn.Output]>
             >
             <[graphics_pointlight][RightWingTipLightGreen][]
                 <[uint32][PositionID][Fuselage.R]>
@@ -1304,22 +1311,22 @@
                 <[tmvector3d][X0][ 0.7 -0.7 0.0 ]>
                 <[tmvector3d][Color][ 0.2 0.7 0.1 1.0 ]>
                 <[float64][Brightness][ 1.0 ]>
-                <[string8][InputModulation][NavigationLightOn.Output]>					
+                <[string8][InputModulation][NavigationLightOn.Output]>
             >
 
-			// strobe lights		
+            // strobe lights
             <[graphics_flasher][StrobeFlasher][]
                 <[string8][Function][DoublePulse]>
-                <[string8][InputTime][UniversalTime.Output]>    
+                <[string8][InputTime][UniversalTime.Output]>
                 <[float64][Period][2.0]>
-            >			
+            >
             <[graphics_input][StrobeLightOn][]
                 <[uint32][InputID][StrobeLightOn.Output]>
-            >			
+            >
             <[graphics_product][StrobeSwitched][]
                 <[uint32][Input0][StrobeFlasher.Output]>
                 <[uint32][Input1][StrobeLightOn.Output]>
-            >				
+            >
             <[graphics_pointlight][LightStrobe_2][]
                 <[uint32][PositionID][Fuselage.R]>
                 <[uint32][OrientationID][Fuselage.Q]>
@@ -1331,7 +1338,7 @@
                 <[float64][ConeCenter][0.0]>
                 <[float64][ConeCutoff][-0.5]>
                 <[float64][Brightness][10.0]>
-            >			
+            >
             <[graphics_pointlight][LightStrobe_4][]
                 <[uint32][PositionID][Fuselage.R]>
                 <[uint32][OrientationID][Fuselage.Q]>
@@ -1344,8 +1351,8 @@
                 <[float64][ConeCutoff][-0.5]>
                 <[float64][Brightness][10.0]>
             >
-			
-			// landing lights	
+
+            // landing lights
             <[graphics_input][LandingLightOn][]
                 <[uint32][InputID][LandingLightOn.Output]>
             >
@@ -1361,8 +1368,8 @@
                 <[float64][Brightness][4.0]>
                 <[string8][InputModulation][LandingLightOn.Output]>
             >
-			
-			// propeller
+
+            // propeller
             <[propellergraphics][HeliceComplete_9][]
                 <[string8][GeometryList][ propdisc ]>
                 <[uint32][PositionID][Fuselage.R]>
@@ -1383,7 +1390,7 @@
                 <[uint32][PositionID][Fuselage.R]>
                 <[uint32][OrientationID][Fuselage.Q]>
                 <[uint32][AngleID][Propeller.RotationAngle]>
-                <[tmvector3d][Axis][-1.0 0.0 0.0]>
+                <[tmvector3d][Axis][1.0 0.0 0.0]>
                 <[tmvector3d][Pivot][4.024940 0.0 -0.089220]>
             >
             <[graphics_propeller_blade][HeliceComplete_9Blades][]
@@ -1398,8 +1405,8 @@
                 <[float64][Radius][1.056961]>
                 <[string8][InputPitch][0.0]>
             >
-			
-			// surfaces
+
+            // surfaces
             <[hingedbodygraphics][profondeur_10][]
                 <[string8][GeometryList][ profondeur ]>
                 <[uint32][PositionID][Fuselage.R]>
@@ -1689,31 +1696,31 @@
                 <[uint32][ShowInside][9]>
             >
             <[rigidbodygraphics][Panel][]
-                <[string8][GeometryList][ panel 
-				 center cover cylinder_1_t cylinder_2_t cylinder_3_t handle_marker internal right_h_t right_v_t text_1 vitre 
-				 face fond fuelgauge_vitre 
-				 egt-oat_face egt-oat_fond egt-oat_vitre 
-				 oilgauge_face oilgauge_fond oilgauge_vitre 
-				 clock_face clock_fond clock_vitre  warning_fond 
-				 kra10.bug kra10.bugselector kra10.dh kra10.cache kra10.face kra10.fond kra10.needle kra10a_vitre
-				 hdg-knob obs-knob hi_fond front hi_vitre
-				 ki252a.crsknob ki252a.gsneedle ki252a.face ki252a.fond ki252a.hdg-warning ki252a.kfc-hdgbug ki252a.nav-warning ki252a.vitre dme
-				 bkg drum-1 drum-2 drum-3 drum-inhg-1 drum-inhg-2 drum-inhg-3 drum-inhg-4 altimeter_face knob mount switch altimeter_vitre  vsi_face vsi_fond vsi_vitre 
-				 asi_face asi_fond asi_vitre tach_face tach_fond visses tach_vitre
-				 case marker magneticcompass_vitre  kr87.adf  ki227.bezel ki227.face ki227.knob ki227.needle ki227_vitre 
-				 audio   ki206.bezel ki206.face ki206.gsflag ki206.gsneedle ki206.knob ki206.locneedle ki206.navflag ki206.toflag ki206card ki206_vitre  
-				 chassis   kp140 kap140_vitre 
-				 egt_face egt_fond egt_vitre  mag.labellh mag.labelrh 
-				 fuelswitch.lh fuelswitch.rh  throttles_base  slot  gearctrl 
-				 ajout  yoke_base  kt70 kt70_vitre 
-				 batt-lights_base info  alt-lights_base alt-lights_info 
-				 pump-lights_base pump-lights_info  
-				 pito-lights_base pito-lights_info 
-				 instr-lights_base instr-lights_info 
-				 land-lights_base land-lights_info 
-				 nav-lights_base nav-lights_info 
-				 starter_base starter_info 
-				 ecran.bord coque ]>
+                <[string8][GeometryList][ panel
+                 center cover cylinder_1_t cylinder_2_t cylinder_3_t handle_marker internal right_h_t right_v_t text_1 vitre
+                 face fond fuelgauge_vitre
+                 egt-oat_face egt-oat_fond egt-oat_vitre
+                 oilgauge_face oilgauge_fond oilgauge_vitre
+                 clock_face clock_fond clock_vitre  warning_fond
+                 kra10.bug kra10.bugselector kra10.dh kra10.cache kra10.face kra10.fond kra10.needle kra10a_vitre
+                 hdg-knob obs-knob hi_fond front hi_vitre
+                 ki252a.crsknob ki252a.gsneedle ki252a.face ki252a.fond ki252a.hdg-warning ki252a.kfc-hdgbug ki252a.nav-warning ki252a.vitre dme
+                 bkg drum-1 drum-2 drum-3 drum-inhg-1 drum-inhg-2 drum-inhg-3 drum-inhg-4 altimeter_face knob mount switch altimeter_vitre  vsi_face vsi_fond vsi_vitre
+                 asi_face asi_fond asi_vitre tach_face tach_fond visses tach_vitre
+                 case marker magneticcompass_vitre  kr87.adf  ki227.bezel ki227.face ki227.knob ki227.needle ki227_vitre
+                 audio   ki206.bezel ki206.face ki206.gsflag ki206.gsneedle ki206.knob ki206.locneedle ki206.navflag ki206.toflag ki206card ki206_vitre
+                 chassis   kp140 kap140_vitre
+                 egt_face egt_fond egt_vitre  mag.labellh mag.labelrh
+                 fuelswitch.lh fuelswitch.rh  throttles_base  slot  gearctrl
+                 ajout  yoke_base  kt70 kt70_vitre
+                 batt-lights_base info  alt-lights_base alt-lights_info
+                 pump-lights_base pump-lights_info
+                 pito-lights_base pito-lights_info
+                 instr-lights_base instr-lights_info
+                 land-lights_base land-lights_info
+                 nav-lights_base nav-lights_info
+                 starter_base starter_info
+                 ecran.bord coque ]>
                 <[uint32][PositionID][Fuselage.R]>
                 <[uint32][OrientationID][Fuselage.Q]>
             >
@@ -1922,13 +1929,13 @@
                 <[tmvector3d][Axis][-0.997564 0.0 0.069756]>
                 <[tmvector3d][Pivot][2.258720 -0.308000 0.324960]>
             >
-			// clock
+            // clock
             <[graphics_input][LocalTime][]
                 <[uint32][InputID][LocalTime.Output]>
             >
             <[graphics_sec_to_hms][Watch][]
                 <[string8][Input][LocalTime.Output]>
-            >			
+            >
             <[hingedbodygraphics][clock_secondes_5][]
                 <[string8][GeometryList][ secondes ]>
                 <[uint32][PositionID][Fuselage.R]>
@@ -2471,8 +2478,8 @@
                 <[string8][SoundFile][sideslip.wav]>
                 <[bool][External][false]>
             >
-			
-            // stall warning		
+
+            // stall warning
             <[soundinput][AngleOfAttack][]
                 <[uint32][InputID][AngleOfAttack.Output]>
             >
@@ -2496,7 +2503,7 @@
                 <[string8][SoundFile][stall.wav]>
                 <[bool][External][false]>
             >
-			
+
             // prop wash
             <[soundmapping][RPMPitchWind][]
                 <[string8][Input][RotationSpeed.Output]>
@@ -2521,7 +2528,7 @@
                 <[uint32][VelocityID][Fuselage.V]>
                 <[string8][SoundFile][prop1_out.wav]>
                 <[bool][Internal][false]>
-            >			
+            >
 
             // starter cranking
             <[soundinput][IgnitionSoundInput][]
@@ -2542,7 +2549,7 @@
                 <[uint32][PositionID][Fuselage.R]>
                 <[uint32][VelocityID][Fuselage.V]>
                 <[string8][SoundFile][star1_inn.wav]>
-                <[bool][External][false]>					
+                <[bool][External][false]>
             >
             <[sound_multi][IgnitionSoundExt][]
                 <[string8][InputTrigger][IgnitionSoundInput.Output]>
@@ -2551,8 +2558,8 @@
                 <[uint32][PositionID][Fuselage.R]>
                 <[uint32][VelocityID][Fuselage.V]>
                 <[string8][SoundFile][star1_out.wav]> //engine_cranking.wav
-                <[bool][Internal][false]>					
-            >			
+                <[bool][Internal][false]>
+            >
 
             // engine loop
             <[soundinput][RotationSpeed][]
@@ -2587,7 +2594,7 @@
                 <[uint32][PositionID][Fuselage.R]>
                 <[uint32][VelocityID][Fuselage.V]>
                 <[string8][SoundFile][engine_int.wav]>
-                <[bool][External][false]>			   
+                <[bool][External][false]>
             >
             <[soundloop][RPMRunLoopExt][]
                 <[string8][InputVolume][RPMVolumeRun.Output]>
@@ -2595,8 +2602,8 @@
                 <[uint32][PositionID][Fuselage.R]>
                 <[uint32][VelocityID][Fuselage.V]>
                 <[string8][SoundFile][engine_ext.wav]>
-                <[bool][Internal][false]>			   
-            >			
+                <[bool][Internal][false]>
+            >
 
             // wheels
             <[soundinput][GroundRollLoadFront][]
@@ -2686,7 +2693,7 @@
                 <[uint32][VelocityID][Fuselage.V]>
                 <[string8][SoundFile][rumble.wav]>
             >
-			
+
             // flap lever
             <[soundinput][FlapLeverPullSound][]
                 <[string8][InputID][FlapLeverPullSound.Output]>
@@ -2702,7 +2709,7 @@
             >
             <[soundinput][FlapLeverReleaseSound][]
                 <[string8][InputID][FlapLeverReleaseSound.Output]>
-            >			
+            >
             <[sound_multi][SoundFlapLeverRelease][]
                 <[uint32][PositionID][Fuselage.R]>
                 <[uint32][VelocityID][Fuselage.V]>
@@ -2712,7 +2719,7 @@
                 <[string8][SoundFile][flaps.wav]>
                 <[bool][External][false]>
             >
-			
+
             // button and switches
             <[soundinput][ButtonSound][]
                 <[uint32][InputID][ButtonSound.Output]>
@@ -2739,5 +2746,5 @@
                 <[bool][External][false]>
             >
         >
-    >   
+    >
 >
