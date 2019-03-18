@@ -1,200 +1,34 @@
 <[file][][]
     <[object][][]
         <[int][Version][210]>
-        <[vec32array][ContactSpheres][ (3.198 0 -1.68 0.04) (1.233 1.541 -1.659 0.04) (1.233 -1.541 -1.659 0.04) ]>
+        <[vec32array][ContactSpheres][ (3.191 0.0 -1.518 0.2) (1.232 1.541 -1.445 0.255) (1.232 -1.541 -1.445 0.255) ]>
         <[string8][DisplayName][Yakovlev Yak 18T]>
         <[string8][DescriptionTextEN][The Yakovlev Yak-18T is a four or five seat fully aerobatic utility aircraft. Introduced to train Aeroflot pilots, it has gained some popularity as a sportplane both inside and outside the former USSR. It is powered by a 268-298 kW (360-400 hp) Vedeneyev M14P radial engine, and is designed for stresses of +6.48/-3.24 g. (from Wikipedia)
-		Converted from FlightGear by Krzysztof Kaniewski, 3D model by Emmanuel Baranger (3D/FDM)/ Samaliet (System/Instruments).]>
+		Converted from FlightGear by Krzysztof Kaniewski, Original 3D model made by Emmanuel Baranger (3D/FDM)/ Samaliet (System/Instruments).]>
         <[float64][WingSpan][11.1]>
         <[float64][Mass][1217]>
-        <[float64][MinimumSpeed][20]>
+        <[float64][MinimumSpeed][30.5]>
         <[float64][ApproachSpeed][40]>
-        <[float64][CruiseSpeed]  [135]>
-        <[float64][MaximumSpeed] [229.5]>
-        <[tmvector2d][FlapSpeedRange][ 20 25 ]>
-        <[tmvector2d][NormalSpeedRange][ 20 67.5 ]>
-        <[tmvector2d][CautionSpeedRange][ 67.5 229.5 ]>
-        <[float64][MaximumAltitude][7200]>
-        <[float64][CruiseAltitude] [6000]>
+        <[float64][CruiseSpeed]  [67.5]>
+        <[float64][MaximumSpeed] [70.5]>
+        <[tmvector2d][FlapSpeedRange][ 30.5 45 ]>
+        <[tmvector2d][NormalSpeedRange][ 30.5 67.5 ]>
+        <[tmvector2d][CautionSpeedRange][ 67.5 80.5 ]>
+        <[float64][MaximumAltitude][4000]>
+        <[float64][CruiseAltitude] [2000]>
         <[float64][QSpan][11.1]>
-        <[float64][QMass][1217]>
-        <[float64][QSpeed][135]>
+        <[float64][QMass][1650]>
+        <[float64][QSpeed][70.5]>
         <[float64][QPower][268451.6]>
         <[float64][QThrust][0]>
-        <[float64][QRange][300000.0]>
+        <[float64][QRange][740000.0]>
         <[float64][QRatio][0.0]>
-        <[float64][QBuild][1300]>
-        <[float64][QVirgin][1972]>
+        <[float64][QBuild][750]>
+        <[float64][QVirgin][1967]>
         <[bool][Airplane][true]>
         <[bool][Flaps][true]>
         <[bool][Retracts][true]>
         <[string8][Pilot][]>
     >
 >
-<?xml version="1.0" encoding="ISO-8859-1"?>
-
-<!-- Yak 18 T         : 2012 Emmanuel BARANGER
-   
-     sources          : http://en.wikipedia.org/wiki/Yakovlev_Yak-18T
-
-     wingspan         :  11.16 m    ( 36 ft 7 1/2 in)
-     length           :   8.39 m    ( 27 ft 6     in)
-     height           :   3.40 m    ( 11 ft 2     in)
-     empty weight     :   1217 kg   ( 2683 lb       )
-     engine           : 1 × Vedeneyev M14P 9-cylinder air-cooled radial engine (360 hp)
-     Cruise speed     :    250 km/h ( 135 kts       )
-     Maximum speed    :    262 km/h ( 141 kts       )
--->
-
-<airplane mass="2683">
-
-  <!-- Approach configuration -->
-  <approach speed="40" aoa="4" fuel="0.2">
-    <control-setting axis="/controls/engines/engine[0]/throttle" value="0.2"/>
-    <control-setting axis="/controls/engines/engine[0]/mixture" value="1.0"/>
-    <control-setting axis="/controls/flight/flaps" value="1.0"/>
-  </approach>
-
-  <!-- Cruise configuration -->
-  <cruise speed="135" alt="6000" fuel="0.5">
-    <control-setting axis="/controls/engines/engine[0]/throttle" value="0.7"/>
-    <control-setting axis="/controls/engines/engine[0]/mixture" value="0.6"/>
-    <control-setting axis="/controls/flight/flaps" value="0.0"/>
-  </cruise>
-
-  <cockpit x="1.432" y="0.272" z="0.5567"/>
-
-  <fuselage ax="3.961" ay="0" az="-0.148" bx="-3.601" by="0" bz="0.036" width="1.204" taper="0.5" midpoint="0.3"/>
-
-  <wing x="1.246" y="0.339" z="-0.540" 
-        chord="2.094" 
-        length="5.230" 
-        taper="0.58"
-        sweep="-1"
-        dihedral="7"
-        camber="0.01">
-        <stall aoa="18" width="6" peak="1.5"/>
-        <flap0 start="-0.065" end="0.27" lift="1.2" drag="1.25"/>
-        <flap1 start="0.63" end="0.97" lift="1.2" drag="1.1"/>
-
-        <control-input axis="/controls/flight/flaps" control="FLAP0"/>
-        <control-input axis="/controls/flight/aileron" control="FLAP1" split="true"/>
-        <control-input axis="/controls/flight/aileron-trim" control="FLAP1" split="true"/>
-
-        <control-output control="FLAP0" prop="/surface-positions/flap-pos-norm"/>
-        <control-output control="FLAP1" side="left" prop="/surface-positions/left-aileron-pos-norm"/>
-        <control-output control="FLAP1" side="right" prop="/surface-positions/right-aileron-pos-norm"/>
-        <control-output control="FLAP1" prop="/surface-positions/aileron-pos-norm"/>
-
-        <control-speed control="FLAP0" transition-time="2"/>
-  </wing>
-
-  <hstab x="-3" y="0" z="0.183" 
-         chord="1.184" 
-         length="1.733" 
-         taper="0.7"
-         sweep="6">
-         <stall aoa="14" width="2" peak="1.5"/>
-         <flap0 start="0" end="1" lift="1.5" drag="1"/>
-
-         <control-input axis="/controls/flight/elevator" control="FLAP0"/>
-         <control-input axis="/controls/flight/elevator-trim" control="FLAP0"/>
-
-         <control-output control="FLAP0" prop="/surface-positions/elevator-pos-norm"/>
-  </hstab>
-
-  <vstab x="-3.236" y="0" z="0.085" 
-         chord="1.441"
-         length="1.534"
-         taper="0.7"
-         sweep="6">
-         <stall aoa="14" width="3" peak="1.5"/>
-         <flap0 start="0" end="1" lift="1.75" drag="1.35"/>
-
-         <control-input axis="/controls/flight/rudder" control="FLAP0" invert="true"/>
-         <control-input axis="/controls/flight/rudder-trim" control="FLAP0" invert="true"/>
-
-         <control-output control="FLAP0" prop="/surface-positions/rudder-pos-norm" min="1" max="-1"/>
-  </vstab>
-
-  <!-- Engines   source            : http://en.wikipedia.org/wiki/Vedeneyev_M14P
-
-                 name              : Vedeneyev M14P
-                 type              : Nine cylinder, four-stroke, air-cooled radial engine
-                 power cruise      : 360 hp at 2900 rpm
-                 weight            : 214 kg (472 lb)
-                 displacement      : 10.16 L (620 cubic inches )
-                 compression       : 6.3:1
-  -->
-  <propeller x="3.483" y="0" z="-0.057" 
-             radius="1.2"
-             mass="472" 
-             moment="6"  
-             cruise-speed="135" 
-             cruise-rpm="2800"
-             cruise-alt="6000" 
-             cruise-power="350"
-             takeoff-power="360" 
-             takeoff-rpm="2900">
-             <actionpt x="4.025" y="0" z="-0.089"/>
-             <piston-engine eng-rpm="2900" 
-                            eng-power="360"
-                            displacement="620" 
-                            compression="6.3"/>
-             <control-input control="THROTTLE" axis="/controls/engines/engine[0]/throttle" src0="0.0" src1="1.0" dst0="0.0" dst1="1.0"/>
-             <control-input control="STARTER" axis="/controls/engines/engine[0]/starter" />
-             <control-input control="MAGNETOS" axis="/controls/engines/engine[0]/magnetos" />
-             <control-input control="MIXTURE" axis="/controls/engines/engine[0]/mixture" src0="0.0" src1="1.0" dst0="0.8" dst1="0.8"/>
-  </propeller>
-  
-  <!-- Noze wheel -->
-  <gear x="3.19762" y="0" z="-1.72024" 
-        compression="0.15" 
-        spring="0.8"
-        on-solid="1"
-        sfric="1"
-        dfric="1">
-        <control-input axis="/controls/flight/rudder" control="STEER" square="false"/>
-        <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
-        <control-speed control="EXTEND" transition-time="7"/>
-        <control-output control="EXTEND" prop="/gear/gear[0]/position-norm"/>
-  </gear>
-
-  <!-- Left wheel -->
-  <gear x="1.23297" y="1.54148" z="-1.69946"
-        compression="0.2" 
-        spring="1.8" 
-        damp="0.03" 
-        on-solid="1" >
-        <control-input axis="/controls/gear/brake-left" control="BRAKE"/>
-        <control-input axis="/controls/gear/brake-parking" control="BRAKE"/>
-        <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
-        <control-speed control="EXTEND" transition-time="7"/>
-        <control-output control="EXTEND" prop="gear/gear[1]/position-norm"/>
-  </gear>
-
-  <!-- Right wheel -->
-  <gear x="1.23297" y="-1.54148" z="-1.69946"
-        compression="0.2" 
-        spring="1.8"
-        damp="0.03" 
-        on-solid="1" >
-        <control-input axis="/controls/gear/brake-right" control="BRAKE"/>
-        <control-input axis="/controls/gear/brake-parking" control="BRAKE"/>
-        <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
-        <control-speed control="EXTEND" transition-time="7"/>
-        <control-output control="EXTEND" prop="gear/gear[2]/position-norm"/>
-  </gear>
-
-  <!-- Tail contact point -->
-  <gear x="-3.23777" y="0" z="-0.26181"
-        compression="0.01">
-  </gear>
-
-  <tank x="0.456" y="0" z="-0.310" capacity="56" />
-
-  <!-- Mass distribution -->
-  <ballast x="3" y="0" z="-2" mass="1000"/>
- 
-</airplane>
 
