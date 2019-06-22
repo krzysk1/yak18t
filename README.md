@@ -24,3 +24,5 @@ There are other liveries in folder:
 These liveries were made by : samaliet 2012. Thanks to him
 
 Repaint kit and other resources are available here: https://github.com/FGMEMBERS/Yak-18T
+
+Aircraft Technical Data & Specifications: http://www.airliners.net/aircraft-data/yakovlev-yak-18t/384
