@@ -4,7 +4,7 @@
         <[vec32array][ContactSpheres][ (3.191 0.0 -1.518 0.2) (1.232 1.541 -1.445 0.255) (1.232 -1.541 -1.445 0.255) ]>
         <[string8][DisplayName][Yakovlev Yak 18T]>
         <[string8][DescriptionTextEN][The Yakovlev Yak-18T is a four or five seat fully aerobatic utility aircraft. Introduced to train Aeroflot pilots, it has gained some popularity as a sportplane both inside and outside the former USSR. It is powered by a 268-298 kW (360-400 hp) Vedeneyev M14P radial engine, and is designed for stresses of +6.48/-3.24 g. (from Wikipedia)
-		Converted from FlightGear by Krzysztof Kaniewski, Original 3D model made by Emmanuel Baranger (3D/FDM)/ Samaliet (System/Instruments).]>
+Converted from FlightGear by Krzysztof Kaniewski, Original 3D model made by Emmanuel Baranger (3D/FDM)/ Samaliet (System/Instruments).]>
         <[float64][WingSpan][11.1]>
         <[float64][Mass][1217]>
         <[float64][MinimumSpeed][30.5]>
