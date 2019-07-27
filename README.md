@@ -11,10 +11,10 @@ Thanks to him.
 
 Installation
 
-1. Unzip file and move the folder "yak-18t" to C:\Users\~\Documents\Aerofly FS2\aircraft.
+1. Unzip file and move the folder "yak18t" to C:\Users\~\Documents\Aerofly FS2\aircraft.
 
 Tips:
-Hook button - turn on/off engine
+
 
 There are other liveries in folder:
 
